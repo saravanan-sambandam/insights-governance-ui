@@ -1,11 +1,239 @@
-<div class="container-fluid pb-3">
-    <h5>Dashboard</h5>
-    <div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
-        <div class="bg-body-tertiary border rounded-3">
-            <br><br><br><br><br><br><br><br><br><br>
+<main class="py-6 bg-surface-secondary">
+    <div class="container">
+        <div class="h-100 p-4 bg-body-tertiary border rounded-3 mb-3 text-center">
+            <h1>Welcome to our Reporting Platform!</h1>
+            <p>At Insights Governance, we provide powerful reporting solutions to help you make informed decisions. Our
+                platform empowers you with comprehensive insights into your data, enabling you to drive business growth
+                and efficiency.</p>
         </div>
-        <div class="bg-body-tertiary border rounded-3">
-            <br><br><br><br><br><br><br><br><br><br>
+        <!-- Card stats -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="text-center mb-3 font-roboto"><span class="text-primary">Dashboard</span> - SSRS Audit Report
+                </h3>
+            </div>
+            <div class="row g-6">
+                <div class="col-xl-3 col-sm-6 col-12">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total no of
+                                        reports</span>
+                                    <span class="h3 font-bold mb-0">12000</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-success text-white text-lg rounded-circle">
+                                        <i class='bx bxs-report'></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-2 mb-0 text-sm">
+                                <span class="badge badge-pill bg-soft-success text-success me-2">
+                                    <i class="bx bxs-up-arrow me-1"></i>13%
+                                </span>
+                                <span class="text-nowrap text-xs text-muted">Since last month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total no of
+                                        subscriptions</span>
+                                    <span class="h3 font-bold mb-0">215</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-primary text-white text-lg rounded-circle">
+                                        <i class="bx bxs-box"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-2 mb-0 text-sm">
+                                <span class="badge badge-pill bg-soft-success text-success me-2">
+                                    <i class="bx bxs-up-arrow me-1"></i>30%
+                                </span>
+                                <span class="text-nowrap text-xs text-muted">Since last month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total no of
+                                        users</span>
+                                    <span class="h3 font-bold mb-0">1400</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                        <i class="bx bxs-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-2 mb-0 text-sm">
+                                <span class="badge badge-pill bg-soft-danger text-danger me-2">
+                                    <i class="bx bxs-down-arrow me-1"></i>-5%
+                                </span>
+                                <span class="text-nowrap text-xs text-muted">Since last month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total no of user
+                                        groups</span>
+                                    <span class="h3 font-bold mb-0">95</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">
+                                        <i class="bx bxs-group"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-2 mb-0 text-sm">
+                                <span class="badge badge-pill bg-soft-success text-success me-2">
+                                    <i class="bx bxs-up-arrow me-1"></i>10%
+                                </span>
+                                <span class="text-nowrap text-xs text-muted">Since last month</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tables -->
+        <div class="row">
+            <!-- Report Aging Table -->
+            <div class="col-4">
+                <table class="table table-striped table-hover table-bordered caption-top">
+                    <caption>Reports based on aging</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Reports</th>
+                            <th scope="col">Aging</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>1011</td>
+                            <td>30 days</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>1012</td>
+                            <td>60 days</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>1013</td>
+                            <td>90 days</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>1014</td>
+                            <td>90 days</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>1015</td>
+                            <td>90 days</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- User-based Report Analysis Table -->
+            <div class="col-4">
+                <table class="table table-striped table-hover table-bordered caption-top">
+                    <caption>Reports based on users</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Reports</th>
+                            <th scope="col">Aging</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Adam</td>
+                            <td>30 days</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Vincent</td>
+                            <td>60 days</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Paul</td>
+                            <td>90 days</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Rossie</td>
+                            <td>90 days</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Ziperski</td>
+                            <td>90 days</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Report Scheduling Table -->
+            <div class="col-4">
+                <table class="table table-striped table-hover table-bordered caption-top">
+                    <caption>Reports based on time</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Reports</th>
+                            <th scope="col">Aging</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>1011</td>
+                            <td>Daily</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>1012</td>
+                            <td>Weekly</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>1013</td>
+                            <td>Monthly</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>1014</td>
+                            <td>Quaterly</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>1015</td>
+                            <td>Yearly</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+</main>
