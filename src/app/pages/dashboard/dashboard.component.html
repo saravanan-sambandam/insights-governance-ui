@@ -237,3 +237,58 @@
         </div>
     </div>
 </main>
+
+<div class="main">
+<div class="tab">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+      <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+      <td mat-cell *matCellDef="let emp">{{ emp[column] }}</td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let emprow; columns: displayedColumns"></tr>
+  </table>
+  <mat-paginator
+    #paginator
+    [pageSizeOptions]="pageSizes1"
+    showFirstLastButtons
+  ></mat-paginator>
+  </div>
+
+
+  <div class="tab margin-left-50">
+  <table mat-table [dataSource]="dataSource2" class="mat-elevation-z8">
+    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+      <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+      <td mat-cell *matCellDef="let emp">{{ emp[column] }}</td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let emprow; columns: displayedColumns"></tr>
+  </table>
+  <mat-paginator
+    #paginator2
+    [pageSizeOptions]="pageSizes2"
+    showFirstLastButtons
+  ></mat-paginator>
+</div>
+
+<div class="tab margin-left-50">
+    <table mat-table [dataSource]="dataSource3" class="mat-elevation-z8">
+      <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+        <th mat-header-cell *matHeaderCellDef>{{ column }}</th>
+        <td mat-cell *matCellDef="let emp">{{ emp[column] }}</td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let emprow; columns: displayedColumns"></tr>
+    </table>
+    <mat-paginator
+      #paginator3
+      [pageSizeOptions]="pageSizes3"
+      showFirstLastButtons
+    ></mat-paginator>
+  </div>
+</div>
+  <button (click)="openExcel()">open excel</button>
