@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MaterialComponentsModule } from './material-components/material-components.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-
-import { MaterialComponentsModule } from './material-components/material-components.module';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReportListingComponent } from './pages/report-listing/report-listing.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +16,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
+    ReportListingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialComponentsModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
