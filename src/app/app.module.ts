@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MaterialComponentsModule } from './material-components/material-components.module';
+import { MaterialModule } from './modules/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,7 +21,7 @@ import { ReportListingComponent } from './pages/report-listing/report-listing.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialComponentsModule,
+    MaterialModule,
     BrowserAnimationsModule
   ],
   providers: [],

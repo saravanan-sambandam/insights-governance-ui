@@ -28,4 +28,4 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatPaginatorModule,
   ],
 })
-export class MaterialComponentsModule {}
+export class MaterialModule {}

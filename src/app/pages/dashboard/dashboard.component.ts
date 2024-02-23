@@ -70,10 +70,10 @@ export class DashboardComponent implements OnInit {
   pageSizes3 = [5, 10];
 
   private data: any[] = [
-    { name: '10', value: '9', color: '#665faac' },
-    { name: '60', value: '20', color: '#dd8050c4' },
-    { name: '80', value: '30', color: '#63adfeb3' },
-    { name: '10', value: '8', color: '#24b044d9' },
+    { name: '3000', value: '3000', color: '#198754' },
+    { name: '215', value: '215', color: '#0d6efd' },
+    { name: '1400', value: '1400', color: '#0dcaf0' },
+    { name: '176', value: '176', color: '#ffc107' },
   ];
   private margin = { top: 10, right: 30, bottom: 30, left: 40 };
   private width = 450;
