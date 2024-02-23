@@ -1,10 +1,12 @@
 export interface Reports {
-  id: number;
-  Reports: number;
-  Aging: string;
+  "Id": number;
+  "Reports"?: number;
+  "User Name"?: string;
+  "Aging": string;
 }
 
-export interface Project {
-  name: string;
-  id: number;
+export interface ReportsListing {
+  "Id": number;
+  "Report Name": string;
+  "Report Link": string;
 }

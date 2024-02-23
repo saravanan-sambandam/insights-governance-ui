@@ -12,69 +12,55 @@ import { MatSort, Sort } from '@angular/material/sort';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'Reports', 'Aging'];
+  displayedColumns: string[] = ['Id', 'Reports', 'Aging'];
+  displayedColumns2: string[] = ['Id', 'User Name', 'Aging'];
 
   reportData: Reports[] = [
-    {
-      id: 1,
-      Reports: 1011,
-      Aging: '30 days',
-    },
-    {
-      id: 2,
-      Reports: 1012,
-      Aging: '60 days',
-    },
-    {
-      id: 3,
-      Reports: 1012,
-      Aging: '60 days',
-    },
-    {
-      id: 4,
-      Reports: 1012,
-      Aging: '60 days',
-    },
-    {
-      id: 5,
-      Reports: 1012,
-      Aging: '60 days',
-    },
-    {
-      id: 6,
-      Reports: 1012,
-      Aging: '60 days',
-    },
-    {
-      id: 7,
-      Reports: 1012,
-      Aging: '60 days',
-    },
-    {
-      id: 8,
-      Reports: 1012,
-      Aging: '60 days',
-    },
-    {
-      id: 9,
-      Reports: 1012,
-      Aging: '60 days',
-    },
-    {
-      id: 10,
-      Reports: 1012,
-      Aging: '60 days',
-    },
+    { "Id": 1, "Reports": 1011, "Aging": "30 days" },
+    { "Id": 2, "Reports": 1012, "Aging": "60 days" },
+    { "Id": 3, "Reports": 1012, "Aging": "60 days" },
+    { "Id": 4, "Reports": 1012, "Aging": "60 days" },
+    { "Id": 5, "Reports": 1012, "Aging": "60 days" },
+    { "Id": 6, "Reports": 1012, "Aging": "60 days" },
+    { "Id": 7, "Reports": 1012, "Aging": "60 days" },
+    { "Id": 8, "Reports": 1012, "Aging": "60 days" },
+    { "Id": 9, "Reports": 1012, "Aging": "60 days" },
+    { "Id": 10, "Reports": 1012, "Aging": "60 days" }
+  ];
+
+  reportData2: Reports[] = [
+    { "Id": 1, "User Name": "Adam", "Aging": "30 days" },
+    { "Id": 2, "User Name": "Roozen", "Aging": "45 days" },
+    { "Id": 3, "User Name": "Judy", "Aging": "45 days" },
+    { "Id": 4, "User Name": "Michael", "Aging": "45 days" },
+    { "Id": 5, "User Name": "Adrian", "Aging": "60 days" },
+    { "Id": 6, "User Name": "Alfred Henry", "Aging": "60 days" },
+    { "Id": 7, "User Name": "Vu Ha", "Aging": "60 days" },
+    { "Id": 8, "User Name": "Paul", "Aging": "90 days" },
+    { "Id": 9, "User Name": "Bill", "Aging": "90 days" },
+    { "Id": 10, "User Name": "Mary", "Aging": "90 days" }];
+
+  reportData3: Reports[] = [
+    { "Id": 1, "Reports": 1011, "Aging": "Daily" },
+    { "Id": 2, "Reports": 1012, "Aging": "Weekly" },
+    { "Id": 3, "Reports": 1012, "Aging": "Monthly" },
+    { "Id": 4, "Reports": 1012, "Aging": "Quaterly" },
+    { "Id": 5, "Reports": 1012, "Aging": "Yearly" },
+    { "Id": 6, "Reports": 1012, "Aging": "Yearly" },
+    { "Id": 7, "Reports": 1012, "Aging": "Yearly" },
+    { "Id": 8, "Reports": 1012, "Aging": "Yearly" },
+    { "Id": 9, "Reports": 1012, "Aging": "Yearly" },
+    { "Id": 10, "Reports": 1012, "Aging": "Yearly" }
   ];
 
   dataSource = new MatTableDataSource(this.reportData);
-  dataSource2 = new MatTableDataSource(this.reportData);
-  dataSource3 = new MatTableDataSource(this.reportData);
+  dataSource2 = new MatTableDataSource(this.reportData2);
+  dataSource3 = new MatTableDataSource(this.reportData3);
   @ViewChild('paginator') paginator!: MatPaginator;
   @ViewChild('paginator2') paginator2!: MatPaginator;
   @ViewChild('paginator3') paginator3!: MatPaginator;
 
-  constructor() {}
+  constructor() { }
 
   pageSizes1 = [5, 10];
   pageSizes2 = [5, 10];
@@ -86,10 +72,5 @@ export class DashboardComponent implements OnInit {
     this.dataSource3.paginator = this.paginator3;
   }
 
-  openExcel() {
-    window.open(
-      'https://ascendionhub.sharepoint.com/:x:/s/CES-FullStackAnalyticsCircle/Eb_mVypYF31Kp1X4pnvX_swBZerLDShbVG17wlvW56H1Ng?e=iZwkMX&wdOrigin=TEAMS-WEB.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1708575004668&web=1'
-    );
-  }
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
