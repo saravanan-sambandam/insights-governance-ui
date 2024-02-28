@@ -1,0 +1,203 @@
+<main class="py-6 bg-surface-secondary">
+    <div class="container">
+        
+        <!-- Dashboard Stats Section -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <h3 class="text-center mb-3 font-roboto">
+                    <div class="title-text">
+                        <span class="text-danger">Data Insights</span> - SSRS
+                    </div>
+                </h3>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card shadow my-4">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total no
+                                                    of
+                                                    reports</span>
+                                                <span class="h3 font-bold mb-0">3000</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div
+                                                    class="icon icon-shape bg-success text-white text-lg rounded-circle">
+                                                    <i class='bx bxs-report'></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mb-0 text-sm">
+                                            <span class="badge badge-pill bg-soft-success text-success me-2">
+                                                <i class="bx bxs-up-arrow me-1"></i>13%
+                                            </span>
+                                            <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card shadow my-4">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total no
+                                                    of
+                                                    subscriptions</span>
+                                                <span class="h3 font-bold mb-0">215</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div
+                                                    class="icon icon-shape bg-primary text-white text-lg rounded-circle">
+                                                    <i class="bx bxs-box"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mb-0 text-sm">
+                                            <span class="badge badge-pill bg-soft-success text-success me-2">
+                                                <i class="bx bxs-up-arrow me-1"></i>30%
+                                            </span>
+                                            <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card shadow my-4">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total no
+                                                    of
+                                                    users</span>
+                                                <span class="h3 font-bold mb-0">1400</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+                                                    <i class="bx bxs-user"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mb-0 text-sm">
+                                            <span class="badge badge-pill bg-soft-danger text-danger me-2">
+                                                <i class="bx bxs-down-arrow me-1"></i>-5%
+                                            </span>
+                                            <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card shadow my-4">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total no
+                                                    of
+                                                    user
+                                                    groups</span>
+                                                <span class="h3 font-bold mb-0">176</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div
+                                                    class="icon icon-shape bg-warning text-white text-lg rounded-circle">
+                                                    <i class="bx bxs-group"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2 mb-0 text-sm">
+                                            <span class="badge badge-pill bg-soft-success text-success me-2">
+                                                <i class="bx bxs-up-arrow me-1"></i>10%
+                                            </span>
+                                            <span class="text-nowrap text-xs text-muted">Since last month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <figure id="donut" style="width: 60%;"></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reporting Table Section -->
+        <section class="row mb-5">
+            <!-- Report Aging Table -->
+            <div class="col-4">
+                <table mat-table [dataSource]="dataSource"
+                    class="mat-elevation-z8 table table-striped table-hover table-bordered border caption-top">
+                    <caption>Reports based on aging</caption>
+                    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                        <th mat-header-cell *matHeaderCellDef class="align-middle fw-bold">{{ column }}</th>
+                        <td mat-cell *matCellDef="let report" class="align-middle">
+                            <ng-container *ngIf="column !== 'Reports'; else reportLink">
+                                {{ report[column] }}
+                            </ng-container>
+                            <ng-template #reportLink>
+                                <a href="report-listing">{{ report[column] }}</a>
+                            </ng-template>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let reportrow; columns: displayedColumns"></tr>
+                </table>
+                <mat-paginator #paginator [pageSizeOptions]="pageSizes1" showFirstLastButtons></mat-paginator>
+            </div>
+            <!-- User-based Report Analysis Table -->
+            <div class="col-4">
+                <table mat-table [dataSource]="dataSource2"
+                    class="mat-elevation-z8 table table-striped table-hover table-bordered border caption-top">
+                    <caption>Reports based on users</caption>
+                    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns2">
+                        <th mat-header-cell *matHeaderCellDef class="align-middle fw-bold">{{ column }}</th>
+                        <td mat-cell *matCellDef="let report" class="align-middle">
+                            <ng-container *ngIf="column !== 'User Name'; else reportLink">
+                                {{ report[column] }}
+                            </ng-container>
+                            <ng-template #reportLink>
+                                <a href="report-listing">{{ report[column] }}</a>
+                            </ng-template>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                    <tr mat-row *matRowDef="let reportrow; columns: displayedColumns2"></tr>
+                </table>
+                <mat-paginator #paginator2 [pageSizeOptions]="pageSizes2" showFirstLastButtons></mat-paginator>
+            </div>
+            <!-- Report Scheduling Table -->
+            <div class="col-4">
+                <table mat-table [dataSource]="dataSource3"
+                    class="mat-elevation-z8 table table-striped table-hover table-bordered border caption-top">
+                    <caption>Reports based on time</caption>
+                    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+                        <th mat-header-cell *matHeaderCellDef class="align-middle fw-bold">{{ column }}</th>
+                        <td mat-cell *matCellDef="let report" class="align-middle">
+                            <ng-container *ngIf="column !== 'Reports'; else reportLink">
+                                {{ report[column] }}
+                            </ng-container>
+                            <ng-template #reportLink>
+                                <a href="report-listing">{{ report[column] }}</a>
+                            </ng-template>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let reportrow; columns: displayedColumns"></tr>
+                </table>
+                <mat-paginator #paginator3 [pageSizeOptions]="pageSizes3" showFirstLastButtons></mat-paginator>
+            </div>
+        </section>
+
+    </div>
+</main>

@@ -1,0 +1,22 @@
+<main class="py-6 bg-surface-secondary">
+    <div class="container">
+
+        <div class="col-12">
+            <h3 class="text-center mb-3 font-roboto">
+                <div class="title-text">
+                    <span class="text-danger">Data Insights</span> - Power BI
+                </div>
+            </h3>
+        </div>
+
+        <!-- <div id="reportContainer" style="height: 600px;"></div> -->
+        <div class="d-flex align-items-center justify-content-center flex-wrap border my-3">
+            <div class="d-flex align-items-end justify-content-end flex-fill">
+                <button (click)="reloadIframe()" class="btn btn-dark btn-sm">Reload</button>
+            </div>
+            <iframe #iframeRef title="Demo - Google Ads" width="1140" height="541.25"
+                src="https://app.powerbi.com/reportEmbed?reportId=66e3fa51-31ec-4b87-9d0b-6e072efad8d8&autoAuth=true&ctid=d7758e8f-1df3-489f-86b5-a2254f55f9cc"
+                frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+    </div>
+</main>

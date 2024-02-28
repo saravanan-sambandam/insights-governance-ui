@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ReportListingComponent } from './pages/report-listing/report-listing.component';
+import { PowerbiComponent } from './pages/dashboard/powerbi/powerbi.component';
+import { SsrsComponent } from './pages/dashboard/ssrs/ssrs.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ReportListingComponent } from './pages/report-listing/report-listing.co
     HeaderComponent,
     FooterComponent,
     DashboardComponent,
-    ReportListingComponent
+    ReportListingComponent,
+    PowerbiComponent,
+    SsrsComponent
   ],
   imports: [
     BrowserModule,
