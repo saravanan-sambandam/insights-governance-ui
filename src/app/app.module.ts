@@ -12,6 +12,10 @@ import { ReportListingComponent } from './pages/report-listing/report-listing.co
 import { PowerbiComponent } from './pages/dashboard/powerbi/powerbi.component';
 import { SsrsComponent } from './pages/dashboard/ssrs/ssrs.component';
 
+import { PowerBIEmbedModule } from 'powerbi-client-angular';
+
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +24,15 @@ import { SsrsComponent } from './pages/dashboard/ssrs/ssrs.component';
     DashboardComponent,
     ReportListingComponent,
     PowerbiComponent,
-    SsrsComponent
+    SsrsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    PowerBIEmbedModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
