@@ -132,7 +132,7 @@
         <!-- Reporting Table Section -->
         <section class="row mb-5">
             <!-- Report Aging Table -->
-            <div class="col-4">
+            <div class="col-md-4">
                 <table mat-table [dataSource]="dataSource"
                     class="mat-elevation-z8 table table-striped table-hover table-bordered border caption-top">
                     <caption>Reports based on aging</caption>
@@ -154,7 +154,7 @@
                 <mat-paginator #paginator [pageSizeOptions]="pageSizes1" showFirstLastButtons></mat-paginator>
             </div>
             <!-- User-based Report Analysis Table -->
-            <div class="col-4">
+            <div class="col-md-4">
                 <table mat-table [dataSource]="dataSource2"
                     class="mat-elevation-z8 table table-striped table-hover table-bordered border caption-top">
                     <caption>Reports based on users</caption>
@@ -176,7 +176,7 @@
                 <mat-paginator #paginator2 [pageSizeOptions]="pageSizes2" showFirstLastButtons></mat-paginator>
             </div>
             <!-- Report Scheduling Table -->
-            <div class="col-4">
+            <div class="col-md-4">
                 <table mat-table [dataSource]="dataSource3"
                     class="mat-elevation-z8 table table-striped table-hover table-bordered border caption-top">
                     <caption>Reports based on time</caption>

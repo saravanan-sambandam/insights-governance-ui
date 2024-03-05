@@ -13,7 +13,7 @@
             <!-- Report Aging Table -->
             <div class="col-md-12">
                 <table mat-table [dataSource]="dataSource"
-                    class="mat-elevation-z8 table table-striped table-hover table-bordered border caption-top">
+                    class="mat-elevation-z8 table table-responsive table-striped table-hover table-bordered border caption-top">
                     <caption>List of Reports</caption>
                     <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
                         <th mat-header-cell *matHeaderCellDef class="align-middle fw-bold">{{ column }}</th>
